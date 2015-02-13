@@ -13,3 +13,4 @@ RUN cd $GOPATH/src/github.com/cloudfoundry/gorouter; godep restore ./...
 
 RUN go install github.com/cloudfoundry/gorouter
 
+ENTRYPOINT ["/go/bin/gorouter", "-c", "gorouter.yml"]

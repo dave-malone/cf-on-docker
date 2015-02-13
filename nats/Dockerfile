@@ -6,3 +6,4 @@ RUN go get github.com/apcera/gnatsd
 
 EXPOSE 4222
 
+ENTRYPOINT /go/bin/gnatsd
