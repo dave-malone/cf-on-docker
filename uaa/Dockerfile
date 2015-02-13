@@ -4,8 +4,8 @@ MAINTAINER David Malone <dmalone@pivotal.io>
 
 EXPOSE 8080
 
-RUN apt-get update && apt-get install -y git supervisor
+RUN apt-get update && apt-get install -y git
 
 RUN git clone git://github.com/cloudfoundry/uaa.git
 
-CMD ./gradlew run
+RUN cd uaa; ./gradlew assemble
