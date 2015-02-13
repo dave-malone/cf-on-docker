@@ -1,4 +1,4 @@
-FROM dave-malone/golang
+FROM golang:1.4.1
 
 MAINTAINER David Malone <dmalone@pivotal.io>
 
