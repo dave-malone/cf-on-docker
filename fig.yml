@@ -1,0 +1,17 @@
+nats:
+  build: ./nats/
+  ports: 
+   - "4222:4222" 
+gorouter:
+  build: ./gorouter/
+  links:
+   - nats
+  ports:
+   - "8081:8081"
+   - "8082:8082"
+uaa:
+  build: ./uaa/
+  links: 
+   - nats 
+  ports: 
+   - "8080:8080"
